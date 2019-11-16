@@ -28,6 +28,7 @@ MonoBehaviour:
         - id: 4
         - id: 5
         - id: 6
+        - id: 7
         m_EdgeModels:
         - m_GraphAssetModel: {fileID: 11400000}
           m_InputPortReference:
@@ -94,12 +95,25 @@ MonoBehaviour:
               m_Value1: 13049870643268727941
             GraphAssetModel: {fileID: 11400000}
             UniqueId: result
+        - m_GraphAssetModel: {fileID: 11400000}
+          m_InputPortReference:
+            NodeModelGuid:
+              m_Value0: 4928472049900009906
+              m_Value1: 7537439837364501658
+            GraphAssetModel: {fileID: 11400000}
+            UniqueId: 
+          m_OutputPortReference:
+            NodeModelGuid:
+              m_Value0: 5221870776741142167
+              m_Value1: 17458480111368142486
+            GraphAssetModel: {fileID: 11400000}
+            UniqueId: 
         m_StickyNoteModels: []
         m_Stencil:
-          id: 7
+          id: 8
         name: CubeRotationSystem
         m_GraphVariableModels:
-        - id: 8
+        - id: 9
     00000001:
       type: {class: VariableNodeModel, ns: UnityEditor.VisualScripting.Model, asm: Unity.GraphTools.Foundation.Editor}
       data:
@@ -113,7 +127,7 @@ MonoBehaviour:
         m_InputConstantsValues: []
         m_State: 0
         m_DeclarationModel:
-          id: 8
+          id: 9
     00000002:
       type: {class: OnUpdateEntitiesNodeModel, ns: UnityEditor.VisualScripting.Model.Stencils,
         asm: Unity.VisualScripting.Ecs.Editor}
@@ -128,12 +142,13 @@ MonoBehaviour:
         m_InputConstantsValues: []
         m_State: 0
         m_StackedNodeModels:
-        - id: 9
+        - id: 10
         m_FunctionVariableModels: []
         m_FunctionParameterModels:
-        - id: 10
         - id: 11
         - id: 12
+        - id: 13
+        - id: 14
         m_ReturnType:
           Identification: System.Void, mscorlib, Version=4.0.0.0, Culture=neutral,
             PublicKeyToken=b77a5c561934e089
@@ -155,7 +170,7 @@ MonoBehaviour:
         m_InputConstantsValues: []
         m_State: 0
         m_DeclarationModel:
-          id: 12
+          id: 13
     00000004:
       type: {class: GetPropertyGroupNodeModel, ns: UnityEditor.VisualScripting.Model,
         asm: Unity.GraphTools.Foundation.Editor}
@@ -189,8 +204,8 @@ MonoBehaviour:
         - a
         - b
         m_InputConstantsValues:
-        - id: 13
-        - id: 14
+        - id: 15
+        - id: 16
         m_State: 0
         m_DeclaringType:
           Identification: Unity.Mathematics.math, Unity.Mathematics, Version=0.0.0.0,
@@ -220,6 +235,20 @@ MonoBehaviour:
             Culture=neutral, PublicKeyToken=null
         m_Identifier: deltaTime
     00000007:
+      type: {class: StackModel, ns: UnityEditor.VisualScripting.GraphViewModel, asm: Unity.GraphTools.Foundation.Editor}
+      data:
+        m_GuidAsString: 2b93bbb973375644a9c3df5d89d5a986
+        m_GraphAssetModel: {fileID: 11400000}
+        m_Position: {x: 131.85002, y: 177.1}
+        m_Color: {r: 0.776, g: 0.443, b: 0, a: 0.5}
+        m_HasUserColor: 0
+        m_Title: 
+        m_InputConstantKeys: []
+        m_InputConstantsValues: []
+        m_State: 0
+        m_StackedNodeModels:
+        - id: 17
+    00000008:
       type: {class: EcsStencil, ns: UnityEditor.VisualScripting.Model.Stencils, asm: Unity.VisualScripting.Ecs.Editor}
       data:
         addCreateAssetMenuAttribute: 0
@@ -228,7 +257,7 @@ MonoBehaviour:
         UseJobSystem: 0
         UpdateAfter: []
         UpdateBefore: []
-    00000008:
+    00000009:
       type: {class: ComponentQueryDeclarationModel, ns: UnityEditor.VisualScripting.Model.Stencils,
         asm: Unity.VisualScripting.Ecs.Editor}
       data:
@@ -240,7 +269,7 @@ MonoBehaviour:
         m_IsExposed: 1
         m_Tooltip: 
         m_InitializationModel:
-          id: 15
+          id: 18
         m_Modifiers: 1
         variableFlags: 0
         m_AssetModel: {fileID: 11400000}
@@ -260,12 +289,18 @@ MonoBehaviour:
                   Culture=neutral, PublicKeyToken=null
               Subtract: 0
               IsShared: 0
+          - Component:
+              TypeHandle:
+                Identification: Unity.Transforms.Translation, Unity.Transforms, Version=0.0.0.0,
+                  Culture=neutral, PublicKeyToken=null
+              Subtract: 0
+              IsShared: 0
           RootGroup:
             Name: <empty>
             GroupCount: 0
-            ComponentCount: 2
+            ComponentCount: 3
         m_CriteriaModels: []
-    00000009:
+    0000000A:
       type: {class: SetRotationNodeModel, ns: UnityEditor.VisualScripting.Model.Stencils,
         asm: Unity.VisualScripting.Ecs.Editor}
       data:
@@ -279,12 +314,12 @@ MonoBehaviour:
         - Angle
         - Axis
         m_InputConstantsValues:
-        - id: 16
-        - id: 17
+        - id: 19
+        - id: 20
         m_State: 0
         Mode: 0
         Add: 1
-    0000000A:
+    0000000B:
       type: {class: LoopVariableDeclarationModel, ns: UnityEditor.VisualScripting.Model,
         asm: Unity.GraphTools.Foundation.Editor}
       data:
@@ -296,13 +331,13 @@ MonoBehaviour:
         m_IsExposed: 0
         m_Tooltip: 
         m_InitializationModel:
-          id: 15
+          id: 18
         m_Modifiers: 0
         variableFlags: 1
         m_AssetModel: {fileID: 11400000}
         m_Id: d759f524-5973-4be8-a2c5-1479c2863e75
         m_TitleComponentIcon: 5
-    0000000B:
+    0000000C:
       type: {class: LoopVariableDeclarationModel, ns: UnityEditor.VisualScripting.Model,
         asm: Unity.GraphTools.Foundation.Editor}
       data:
@@ -314,13 +349,13 @@ MonoBehaviour:
         m_IsExposed: 0
         m_Tooltip: 
         m_InitializationModel:
-          id: 15
+          id: 18
         m_Modifiers: 0
         variableFlags: 1
         m_AssetModel: {fileID: 11400000}
         m_Id: bc2b5b47-e182-4828-b004-ef5f54b457b7
         m_TitleComponentIcon: 5
-    0000000C:
+    0000000D:
       type: {class: LoopVariableDeclarationModel, ns: UnityEditor.VisualScripting.Model,
         asm: Unity.GraphTools.Foundation.Editor}
       data:
@@ -332,13 +367,31 @@ MonoBehaviour:
         m_IsExposed: 0
         m_Tooltip: 
         m_InitializationModel:
-          id: 15
+          id: 18
         m_Modifiers: 0
         variableFlags: 1
         m_AssetModel: {fileID: 11400000}
         m_Id: 7199f53d-030c-44d8-b58d-0d31820a6f3a
         m_TitleComponentIcon: 5
-    0000000D:
+    0000000E:
+      type: {class: LoopVariableDeclarationModel, ns: UnityEditor.VisualScripting.Model,
+        asm: Unity.GraphTools.Foundation.Editor}
+      data:
+        m_Name: Translation
+        m_DataType:
+          Identification: Unity.Transforms.Translation, Unity.Transforms, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        m_VariableType: 2
+        m_IsExposed: 0
+        m_Tooltip: 
+        m_InitializationModel:
+          id: 18
+        m_Modifiers: 0
+        variableFlags: 1
+        m_AssetModel: {fileID: 11400000}
+        m_Id: ec33bc90-1880-473a-ae3d-616227feb0bd
+        m_TitleComponentIcon: 5
+    0000000F:
       type: {class: FloatConstantModel, ns: UnityEditor.VisualScripting.Model, asm: Unity.GraphTools.Foundation.Editor}
       data:
         m_GuidAsString: 5a6f330190d680341b36ff285d3235ef
@@ -352,7 +405,7 @@ MonoBehaviour:
         m_State: 0
         m_IsLocked: 0
         value: 0
-    0000000E:
+    00000010:
       type: {class: FloatConstantModel, ns: UnityEditor.VisualScripting.Model, asm: Unity.GraphTools.Foundation.Editor}
       data:
         m_GuidAsString: f5d5ab504be96a64b9b9c221ee11326e
@@ -366,9 +419,26 @@ MonoBehaviour:
         m_State: 0
         m_IsLocked: 0
         value: 0
-    0000000F:
+    00000011:
+      type: {class: SetPositionNodeModel, ns: UnityEditor.VisualScripting.Model.Stencils,
+        asm: Unity.VisualScripting.Ecs.Editor}
+      data:
+        m_GuidAsString: a9fbe3fa42edace4e9d9891dca63bd5d
+        m_GraphAssetModel: {fileID: 11400000}
+        m_Position: {x: 0, y: 0}
+        m_Color: {r: 0.776, g: 0.443, b: 0, a: 0.5}
+        m_HasUserColor: 0
+        m_Title: Translate
+        m_InputConstantKeys:
+        - Value
+        m_InputConstantsValues:
+        - id: 21
+        m_State: 0
+        Mode: 0
+        Add: 0
+    00000012:
       type: {class: , ns: , asm: }
-    00000010:
+    00000013:
       type: {class: FloatConstantModel, ns: UnityEditor.VisualScripting.Model, asm: Unity.GraphTools.Foundation.Editor}
       data:
         m_GuidAsString: 2a5fddcecad0d29468db139d4d7daccd
@@ -382,7 +452,7 @@ MonoBehaviour:
         m_State: 0
         m_IsLocked: 0
         value: 0.5
-    00000011:
+    00000014:
       type: {class: Float3ConstantModel, ns: UnityEditor.VisualScripting.Model, asm: Unity.VisualScripting.Ecs.Editor}
       data:
         m_GuidAsString: e94bea954806b47448fca03b721b733a
@@ -398,4 +468,21 @@ MonoBehaviour:
         value:
           x: 0
           y: 1
+          z: 0
+    00000015:
+      type: {class: Float3ConstantModel, ns: UnityEditor.VisualScripting.Model, asm: Unity.VisualScripting.Ecs.Editor}
+      data:
+        m_GuidAsString: 04bb5301d7eb236478cf965184f82adf
+        m_GraphAssetModel: {fileID: 11400000}
+        m_Position: {x: 0, y: 0}
+        m_Color: {r: 0.776, g: 0.443, b: 0, a: 0.5}
+        m_HasUserColor: 0
+        m_Title: Value
+        m_InputConstantKeys: []
+        m_InputConstantsValues: []
+        m_State: 0
+        m_IsLocked: 0
+        value:
+          x: 0
+          y: 0
           z: 0
